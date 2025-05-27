@@ -1,0 +1,184 @@
+2025-05-26 09:37:33,802 [INFO] Start polling
+2025-05-26 09:37:33,991 [INFO] Run polling for bot @salebudget_bot id=7605533870 - 'BUDGETbot'
+2025-05-26 09:37:41,199 [INFO] Update id=954660333 is handled. Duration 143 ms by bot id=7605533870
+2025-05-26 09:37:43,610 [INFO] Update id=954660334 is handled. Duration 59 ms by bot id=7605533870
+2025-05-26 09:37:45,433 [INFO] Update id=954660335 is handled. Duration 71 ms by bot id=7605533870
+2025-05-26 09:43:18,682 [INFO] Update id=954660336 is handled. Duration 71 ms by bot id=7605533870
+2025-05-26 09:44:57,502 [INFO] Update id=954660337 is handled. Duration 2564 ms by bot id=7605533870
+2025-05-26 09:45:15,112 [INFO] Update id=954660338 is handled. Duration 60 ms by bot id=7605533870
+2025-05-26 09:47:22,516 [INFO] Polling stopped
+2025-05-26 09:47:22,770 [INFO] Polling stopped for bot @salebudget_bot id=7605533870 - 'BUDGETbot'
+2025-05-26 09:47:26,152 [INFO] Start polling
+2025-05-26 09:47:26,296 [INFO] Run polling for bot @salebudget_bot id=7605533870 - 'BUDGETbot'
+2025-05-26 09:47:38,783 [INFO] Update id=954660339 is not handled. Duration 118 ms by bot id=7605533870
+2025-05-26 09:47:38,783 [ERROR] Cause exception while process update id=954660339 by bot id=7605533870
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Unsupported start tag "категория" at byte offset 41
+Traceback (most recent call last):
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\bot.py", line 74, in handle_income_prompt
+    await message.answer("Введи доход в формате: <категория> <сумма>\nПример: зарплата 1000")
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\client\bot.py", line 478, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+        bot=bot, method=method, status_code=resp.status, content=raw_result
+    )
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Unsupported start tag "категория" at byte offset 41
+2025-05-26 09:47:50,952 [INFO] Update id=954660340 is handled. Duration 62 ms by bot id=7605533870
+2025-05-26 09:47:53,163 [INFO] Update id=954660341 is not handled. Duration 39 ms by bot id=7605533870
+2025-05-26 09:47:53,164 [ERROR] Cause exception while process update id=954660341 by bot id=7605533870
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Unsupported start tag "категория" at byte offset 41
+Traceback (most recent call last):
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\bot.py", line 74, in handle_income_prompt
+    await message.answer("Введи доход в формате: <категория> <сумма>\nПример: зарплата 1000")
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\client\bot.py", line 478, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+        bot=bot, method=method, status_code=resp.status, content=raw_result
+    )
+  File "E:\programms\PythonProject\my_bots_git\budget_planner_bor\venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Unsupported start tag "категория" at byte offset 41
+2025-05-26 09:51:16,455 [INFO] Polling stopped
+2025-05-26 09:51:16,717 [INFO] Polling stopped for bot @salebudget_bot id=7605533870 - 'BUDGETbot'
+2025-05-26 09:51:19,932 [INFO] Start polling
+2025-05-26 09:51:20,081 [INFO] Run polling for bot @salebudget_bot id=7605533870 - 'BUDGETbot'
+2025-05-26 09:51:24,362 [INFO] Update id=954660342 is handled. Duration 153 ms by bot id=7605533870
+2025-05-26 09:51:32,829 [INFO] Update id=954660343 is handled. Duration 77 ms by bot id=7605533870
+2025-05-26 09:54:14,297 [INFO] Polling stopped
+2025-05-26 09:54:14,556 [INFO] Polling stopped for bot @salebudget_bot id=7605533870 - 'BUDGETbot'
+2025-05-26 09:54:17,981 [INFO] Start polling
+2025-05-26 09:54:18,105 [INFO] Run polling for bot @salebudget_bot id=7605533870 - 'BUDGETbot'
+2025-05-26 09:54:20,337 [INFO] Update id=954660344 is handled. Duration 146 ms by bot id=7605533870
+2025-05-26 09:54:28,455 [INFO] Update id=954660345 is handled. Duration 251 ms by bot id=7605533870
+2025-05-26 09:54:32,878 [INFO] Update id=954660346 is handled. Duration 274 ms by bot id=7605533870
+2025-05-26 09:54:34,983 [INFO] Update id=954660347 is handled. Duration 65 ms by bot id=7605533870
+2025-05-26 09:57:38,243 [INFO] Polling stopped
+2025-05-26 09:57:38,507 [INFO] Polling stopped for bot @salebudget_bot id=7605533870 - 'BUDGETbot'
+2025-05-26 09:57:41,937 [INFO] Start polling
+2025-05-26 09:57:42,087 [INFO] Run polling for bot @salebudget_bot id=7605533870 - 'BUDGETbot'
+2025-05-26 09:57:46,905 [INFO] Update id=954660348 is handled. Duration 226 ms by bot id=7605533870
+2025-05-26 09:57:50,767 [INFO] Update id=954660349 is handled. Duration 196 ms by bot id=7605533870
+2025-05-26 09:57:56,245 [INFO] Update id=954660350 is handled. Duration 312 ms by bot id=7605533870
+2025-05-26 09:57:59,549 [INFO] Update id=954660351 is handled. Duration 63 ms by bot id=7605533870
+2025-05-26 09:58:11,569 [INFO] Update id=954660352 is handled. Duration 330 ms by bot id=7605533870
+2025-05-26 09:58:14,235 [INFO] Update id=954660353 is handled. Duration 60 ms by bot id=7605533870
+2025-05-26 10:06:33,725 [INFO] Update id=954660354 is handled. Duration 76 ms by bot id=7605533870
+2025-05-26 10:06:38,098 [INFO] Update id=954660355 is handled. Duration 74 ms by bot id=7605533870
+2025-05-26 10:10:01,541 [INFO] Polling stopped
+2025-05-26 10:10:01,796 [INFO] Polling stopped for bot @salebudget_bot id=7605533870 - 'BUDGETbot'
+2025-05-26 10:10:07,227 [INFO] Start polling
+2025-05-26 10:10:07,373 [INFO] Run polling for bot @salebudget_bot id=7605533870 - 'BUDGETbot'
+2025-05-26 10:10:11,413 [INFO] Update id=954660356 is handled. Duration 166 ms by bot id=7605533870
+2025-05-26 10:10:14,231 [INFO] Update id=954660357 is handled. Duration 280 ms by bot id=7605533870
+2025-05-26 10:10:21,238 [INFO] Update id=954660358 is handled. Duration 66 ms by bot id=7605533870
+2025-05-26 10:10:25,313 [INFO] Polling stopped
+2025-05-26 10:10:25,579 [INFO] Polling stopped for bot @salebudget_bot id=7605533870 - 'BUDGETbot'
